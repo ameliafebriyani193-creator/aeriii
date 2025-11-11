@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌸 BubblePink</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:"Poppins", sans-serif;}
+    body {
+      background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ffb6c1;
+      color: white;
+      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1534982841079-afde227ada8f?q=80&w=1500&auto=format&fit=crop') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 8rem 2rem;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 182, 193, 0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero button {
+      background-color: #e75480;
+      color: white;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .hero button:hover {
+      background-color: #d84f7d;
+    }
+    section {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      text-align: center;
+      color: #e75480;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+    .category {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .category:hover {
+      transform: translateY(-5px);
+    }
+    .category img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .category h3 {
+      padding: 1rem;
+      color: #e75480;
+      text-align: center;
+    }
+    .news {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .news-article {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    }
+    .news-article img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+    .news-article div {
+      padding: 1rem;
+    }
+    .news-article h4 {
+      color: #e75480;
+      margin-bottom: 0.5rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    .contact {
+      background: #fff0f5;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact input, .contact textarea {
+      padding: 0.8rem;
+      border: 1px solid #ffb6c1;
+      border-radius: 8px;
+      background: #fff9fb;
+    }
+    .contact button {
+      background: #e75480;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #ffb6c1;
+      color: white;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🌸 BubblePink</div>
+    <nav>
+      <a href="#home">Beranda</a>
+      <a href="#categories">Kategori</a>
+      <a href="#news">Berita</a>
+      <a href="#gallery">Galeri</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Selamat Datang di 🌸 BubblePink !</h1>
+      <p>Tempat hiburan penuh warna dan inspirasi untuk kamu yang suka nuansa pink 🌸  </p>
+      <button>Jelajahi Sekarang</button>
+    </div>
+  </section>
+
+  <!-- Tentang Website -->
+  <section id="about">
+    <h2>Tentang 🌸 BubblePink</h2>
+    <div class="about">🌸 BubblePink
+      <p>
+        <strong></strong> adalah website hiburan yang dirancang dengan nuansa <em>feminin, ceria, dan modern</em>.
+        Situs ini menyajikan berbagai konten menarik seputar dunia hiburan — mulai dari musik, film, fashion, hingga berita selebriti terkini.
+      </p>
+      <p>
+        Dengan tampilan bernuansa pink yang lembut, 🌸 BubblePink ingin memberikan suasana menyenangkan bagi para pengunjungnya.
+        Kami hadir untuk menemani kamu menikmati hiburan dengan gaya yang positif, estetik, dan penuh semangat!
+      </p>
+      <p>
+        Di sini kamu bisa membaca berita terbaru, melihat tren fashion terkini, menikmati galeri foto event, dan bahkan mengirim pesan atau saran langsung kepada tim kami 💌.
+      </p>
+    </div>
+  </section>
+
+  <section id="categories">
+    <h2>Kategori Hiburan</h2>
+    <div class="categories">
+      <div class="category">
+        <img src="jisoo.webp" alt="Musik">
+        <h3>Musik & Lagu</h3>
+      </div>
+      <div class="category">
+        <img src="Train_to_Busan.jpg" alt="Film">
+        <h3>Film & Drama</h3>
+      </div>
+      <div class="category">
+        <img src="fashion.webp" alt="Fashion">
+        <h3>Fashion & Gaya</h3>
+      </div>
+      <div class="category">
+        <img src="daehoon.avif" alt="Selebriti">
+        <h3>Selebriti & Gossip</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>Berita Terbaru</h2>
+    <div class="news">
+      <div class="news-article">
+        <img src="sule.webp" alt="Berita 1">
+        <div>
+          <h4>Perselingkuhan jule dan petinju!</h4>
+          <p>perselingkuhan jule membuat netizen murka karna menyia-nyiakan laki-laki se green flag daehoon.</p>
+        </div>
+      </div>
+      <div class="news-article">
+        <img src="Menyoroti-skandal-perundungan-yang-membayangi-kasus-kematian-Timothy-Anugerah-di-kampus-Udayana-XcomMeta80ki-3495864213.webp" alt="Berita 2">
+        <div>
+          <h4>bullying timothy</h4>
+          <p>timothy mahasiswa asal unud bunuh diri akibat menjadi korban bullying </p>
+        </div>
+      </div>
+      <div class="news-article">
+        <img src="Justin-Bieber-Asking-Hailey-For-Another-Child-1024x852.jpg" alt="Berita 3">
+        <div>
+          <h4>Anak Justin dan Hailey</h4>
+          <p>Selebriti ini memiliki anak yang sangat lucu dan kiyowo sangaddd.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Galeri Foto & Event</h2>
+    <div class="gallery">
+      <img src="daehoon.avif" alt="galeri2">
+      <img src="song.jpeg" alt="galeri3">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Kontak Kami</h2>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Nama Lengkap" required />
+        <input type="email" placeholder="Email" required />
+        <textarea rows="4" placeholder="Pesan Anda..." required></textarea>
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 PinkyVibe Entertainment | Semua hak dilindungi 🌸
+  </footer>
+</body>
+</html>
